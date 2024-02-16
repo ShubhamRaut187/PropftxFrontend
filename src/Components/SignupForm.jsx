@@ -2,13 +2,45 @@ import React,{useState} from 'react';
 import LoadingComp from './LoadingComp';
 import './Styles/SignupForm.css'
 
+
 function SignupForm({Setpgname}) {
     let [Name,SetName] = useState('');
     let [Email,SetEmail] = useState('');
     let [Password,SetPassword] = useState('');
-    let [Mobile,SetMobile] = useState(0);
-    let [Address,SetAddress] = useState('')
     let [Loading,SetLoading] = useState(false)
+    
+    let adduser = async(e) => {
+        e.preventDefault();
+        SetLoading(true);
+        if(!Name || !Email || !Password){
+            SetLoading(false);
+            alert('All fields are mandatory');
+            return;
+        }
+        try {
+            let result = await fetch(`https://propftxbackend-xyge.onrender.com/users/signup`,{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({
+                    Name,
+                    Email,
+                    Password
+                })
+            })
+            let response = await result.json();
+            SetLoading(false)
+            Setpgname({
+                Text:'Login Account',
+                Comp:true
+            })
+        } catch (error) {
+            console.log(error);
+            SetLoading(false);
+        }
+    }
+    
     return (
         <div className='signupform_main'>
             <div className='signupmsg_div'>
@@ -20,21 +52,15 @@ function SignupForm({Setpgname}) {
                 <h2>Create Your Account</h2>
                 <p>Signup today and embark the journey of entertainment, suspense, actiion and comedy with us. Your time and entertainment matters to us.</p>
                 {
-                    Loading ? <LoadingComp Text={'Creating account'}/> : <form>
+                    Loading ? <LoadingComp Text={'Creating account'}/> : <form onSubmit={adduser}>
                     <input type="text" placeholder='Enter Name' className='signupform_input' onChange={(event)=>{
                         SetName(event.target.value)
                     }}/>     
                     <input type="email" placeholder='Enter Username/Email' className='signupform_input'onChange={(event)=>{
                         SetEmail(event.target.value)
                     }}/>
-                    <input type="number" placeholder='Enter Mobile Number' className='signupform_input'onChange={(event)=>{
-                        SetMobile(event.target.value)
-                    }}/>
-                    <input type="password" placeholder='Enter New Password' className='signupform_input' onChange={(event)=>{
+                    <input type="password" placeholder='Enter Mobile Number' className='signupform_input'onChange={(event)=>{
                         SetPassword(event.target.value)
-                    }}/>
-                    <input type="text" placeholder='Enter Address' className='signupform_input_address' onChange={(event)=>{
-                        SetAddress(event.target.value)
                     }}/>
                     <input type="submit" value='SignUp' className='signupform_signup_btn'/>
                 </form>  

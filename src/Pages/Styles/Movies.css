@@ -7,3 +7,19 @@
     /* border: 2px solid red; */
     gap: 20px;
 }
+
+/* Media */
+/* Small Screens */
+@media screen and (min-width:320px) and (max-width:767px){
+   .movie_parent{
+    grid-template-columns: repeat(1,1fr);
+   }
+
+ }
+ 
+ /* Medium Screens */
+ @media screen and (min-width:768px) and (max-width:1024px){
+     .movie_parent{
+        grid-template-columns: repeat(2,1fr);
+     }
+ }

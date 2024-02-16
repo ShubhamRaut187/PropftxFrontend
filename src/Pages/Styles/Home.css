@@ -1,0 +1,89 @@
+#home_intro_main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+#home_info_div{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+}
+#home_hello{
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 2px;
+    margin-left: 15px;
+}
+#user-detail-name{
+    color: #ffbd39;
+    font-family: 'Londrina Shadow', sans-serif;
+    font-size: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    text-align: left;
+}
+#home_short_intro{
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    margin: 2px auto 2px 15px;
+    font-size: 32px;
+    text-align: left;
+    font-weight: 900;
+}
+.home_country_name{
+    font-weight: 900;
+}
+.home_country_one{
+    color: #fe8610;
+}
+.home_country_three{
+    color: #1cb628;
+}
+#typewriter{
+    color: white;
+    margin: 15px auto 30px 15px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+}
+.typewriter_changing_text{
+    /* color: #e57d1b; */
+    color: #ffbd39;
+}
+#home_profile_img{
+    width: 50%;
+    height: 600px;
+}
+.home-img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Media */
+/* Small Screens */
+@media screen and (min-width:320px) and (max-width:767px){
+    #home_intro_main{
+        flex-direction: column-reverse;
+    }
+    #home_info_div{
+        width: 100%;
+        height: 400px;
+    }
+    #home_profile_img{
+        width: 100%;
+    }
+
+ }
+ 
+ /* Medium Screens */
+ @media screen and (min-width:768px) and (max-width:1024px){
+     
+ }

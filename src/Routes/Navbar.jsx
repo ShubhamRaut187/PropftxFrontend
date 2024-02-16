@@ -1,20 +1,24 @@
 import React,{useState} from 'react';
 
-import { NavLink,Link } from 'react-router-dom';
+import { NavLink,Link,useNavigate } from 'react-router-dom';
 // import {HashLink as Link} from 'react-router-hash-link'
 import {CodeIcon,HamburgetMenuClose,HamburgetMenuOpen} from './Icon'
-
+import { useSelector,useDispatch } from 'react-redux';
+import { handleLogout } from '../Redux/actions';
 import './Styles/Navbar.css'
 function Navbar(props) {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
-    
-    
+    let Status = useSelector((store)=>{
+      return store.status;
+    })
+    let dispatch = useDispatch();
+    // let Navigate = useNavigate();
     return (
         <div className="navbar">
             <div className="nav-container">
                 <Link to="/" className="nav-logo">
-                    <span>Propfxtx Movies</span>
+                    <span>Propftx Movies</span>
                     {/* <i className="fas fa-code"></i> */}
                     <span className="icon">
                     {/* <CodeIcon /> */}
@@ -45,18 +49,11 @@ function Navbar(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                // exact
-                to="/admin"
-                // activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Admin
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
+              {
+                Status === 'in' ? <button className='logout_button' onClick={()=>{
+                  dispatch(handleLogout(null));
+
+                }}>Logout</button> : <Link
                 // exact
                 to="/loginsignup"
                 // activeClassName="active"
@@ -65,6 +62,7 @@ function Navbar(props) {
               >
                 Login
               </Link>
+              }
             </li>
             </ul>
           <div className="nav-icon" onClick={handleClick}>

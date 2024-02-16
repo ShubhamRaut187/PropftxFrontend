@@ -1,11 +1,55 @@
 import React,{useState} from 'react';
 import LoadingComp from './LoadingComp';
+import {useDispatch} from 'react-redux';
+import {handleLogin} from '../Redux/actions'
+import { useNavigate } from 'react-router-dom';
 import './Styles/LoginForm.css'
 
 function LoginForm({Setpgname}) {
     let [Email,SetEmail] = useState('');
     let [Password,SetPassword] = useState('');
     let [Loading,SetLoading] = useState(false);
+    let dispatch = useDispatch();
+    let navigate = useNavigate();
+
+    let verify = async(e) => {
+        e.preventDefault();
+        if(!Email || !Password){
+            SetLoading(false);
+            alert('All fields are mandatory');
+            return;
+        }
+        try {
+            let result = await fetch(`https://propftxbackend-xyge.onrender.com/users/login`,{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({
+                    Email,
+                    Password
+                })
+            })
+            let response = await result.json();
+            console.log(response);
+            if(response.Message === 'Login successful'){
+                dispatch(handleLogin(response));
+                SetLoading(false);
+                alert('Login Successful');
+                navigate('/');
+
+            }
+            else{
+                SetLoading(false);
+                alert(response.Message);
+            }
+        } catch (error) {
+            SetLoading(false);
+            console.log(error);
+            alert('Try again');
+        }
+    }
+
     return (
         <div className='loginform_main'>
             <div className='loginmsg_div'>
@@ -18,7 +62,7 @@ function LoginForm({Setpgname}) {
                 <h2>Login To Your Account</h2>
                 <p>Please login to your account to explore all Movies, view insights. We are here to make a excellentg choice for your next movie time.</p>
                 {
-                    Loading ? <LoadingComp Text={'Logging in'}/> : <form>
+                    Loading ? <LoadingComp Text={'Logging in'}/> : <form onSubmit={verify}>
                     <input type="email" placeholder='Enter Username/Email' className='loginform_input' onChange={(event)=>{
                         SetEmail(event.target.value);
                     }}/>
