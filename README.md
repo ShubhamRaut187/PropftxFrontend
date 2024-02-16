@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Propftx Movies
+Propftx Movies  is a 🎬 straightforward yet robust movie listing web application developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This project caters to both administrators and regular users, offering distinct functionalities and access levels.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The core functionality of Propftx Movies revolves around showcasing a curated list of movies in an intuitive card format, enhancing the user experience. Users are presented with a visually appealing interface that displays essential details about each movie, such as its name, ratings, category, and description.
 
-## Available Scripts
+Administrators have extended privileges within the application. They possess the ability to create, read, update, and delete (CRUD) movie entries stored in the backend database. Through dedicated forms and interfaces, administrators can seamlessly manage the movie database, ensuring that it remains up-to-date with the latest releases and information. Authentication and authorization mechanisms safeguard these critical administrative functionalities, ensuring that only authorized personnel can access and modify movie data.
 
-In the project directory, you can run:
+For regular users, the focus shifts to providing a seamless browsing experience. While users lack the ability to modify the movie database, they can freely explore the collection of movies available on the platform. The application's responsive design and intuitive navigation enable users to effortlessly browse through the list of movies, facilitating an enjoyable and engaging experience.
 
-### `npm start`
+In summary, Propftx Movies is a feature-rich MERN stack application that caters to both administrators and users. With its emphasis on simplicity, usability, and security, it offers a comprehensive solution for managing and accessing movie data in a dynamic and interactive manner. 🌟🎥🍿
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Admin Login
+Username : admin@123
+Password : admin@123
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Tech Stack
+1. MongoDB
+2. Express JS
+3. React
+4. Node.js
+5. Cloudinary
+6. Mongoose
+7. Redux
 
-### `npm test`
+# Role of Redux
+In the "Propftx Movies" application, Redux plays a pivotal role in handling the login and logout functionalities, ensuring efficient state management and seamless user authentication.
+When a user attempts to log in to the application, Redux manages the login process by dispatching actions to update the application state accordingly. These actions trigger corresponding reducers, which update the Redux store with the user's authentication status and relevant information, such as authentication tokens or user data retrieved from the backend.
+Upon successful login, the Redux store reflects the user's authenticated state, allowing the application to grant access to restricted functionalities, such as creating, updating, or deleting movie entries for administrators.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Backend Repository
+https://github.com/ShubhamRaut187/PropftxBackend
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
