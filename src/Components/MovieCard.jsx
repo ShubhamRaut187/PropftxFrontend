@@ -18,7 +18,9 @@ function MovieCard({elem,Token,Role,getData}) {
                     <button>View</button>
                 </div> */}
                 {
-                    Role === 'Admin' ? <EditButton id={elem._id} Token={Token} getData={getData}/> :<></>
+                    Role === 'Admin' ? <EditButton id={elem._id} Token={Token} getData={getData}/> :<div className='movie_card_op_btn'>
+                    <button>View</button>
+                </div>
                 }
             </div>
         </div>
