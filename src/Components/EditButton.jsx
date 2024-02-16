@@ -15,7 +15,7 @@ function EditButton({id,Token,getData}) {
                     },
                 });
                 let response = await results.json();
-                console.log(response);
+                // console.log(response);
                 alert('Movie Deleted');
                 getData();
         } catch (error) {

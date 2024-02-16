@@ -31,7 +31,7 @@ function LoginForm({Setpgname}) {
                 })
             })
             let response = await result.json();
-            console.log(response);
+            // console.log(response);
             if(response.Message === 'Login successful'){
                 dispatch(handleLogin(response));
                 SetLoading(false);
