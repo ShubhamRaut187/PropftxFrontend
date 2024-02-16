@@ -64,7 +64,7 @@ function UpdateMovie(props) {
             }
         }
         getmovie();
-    })
+    },[Token,id])
 
 
     return (
@@ -84,7 +84,7 @@ function UpdateMovie(props) {
                     SetItem((prevItem)=>({...prevItem, Ratings:e.target.value}))
                 }}/>
                 <input type="text" placeholder='Category' className='createmovieform_input' value={Item.Category}onChange={(e)=>{
-                    SetItem((prevItem)=>({...prevItem, Category:e.target.value}))
+                   SetItem((prevItem)=>({...prevItem, Category:e.target.value}))
                 }}/>
                 <input type="text" placeholder='Description' className='createmovieform_input' value={Item.Description} onChange={(e)=>{
                     SetItem((prevItem)=>({...prevItem, Description:e.target.value}))

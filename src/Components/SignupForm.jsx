@@ -59,7 +59,7 @@ function SignupForm({Setpgname}) {
                     <input type="email" placeholder='Enter Username/Email' className='signupform_input'onChange={(event)=>{
                         SetEmail(event.target.value)
                     }}/>
-                    <input type="password" placeholder='Enter Mobile Number' className='signupform_input'onChange={(event)=>{
+                    <input type="password" placeholder='Enter  Password' className='signupform_input'onChange={(event)=>{
                         SetPassword(event.target.value)
                     }}/>
                     <input type="submit" value='SignUp' className='signupform_signup_btn'/>

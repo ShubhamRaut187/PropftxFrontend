@@ -56,11 +56,15 @@ function LoginForm({Setpgname}) {
                 <h3>Dear Valued Member</h3>
                 <h1>Welcome Back...!</h1>
                 <p>We are delighted to welcome you back at Propftx Movies! Your presence means world to us, and we cant wait to make your experience as fabulous as ever. </p>
+                
             </div>
             
                 <div className='loginform_div'>
                 <h2>Login To Your Account</h2>
                 <p>Please login to your account to explore all Movies, view insights. We are here to make a excellentg choice for your next movie time.</p>
+                <p>Note: For admin login and Crud functionalities</p>
+                <p>username:admin@gmail.com</p>
+                <p>password:admin@123</p>
                 {
                     Loading ? <LoadingComp Text={'Logging in'}/> : <form onSubmit={verify}>
                     <input type="email" placeholder='Enter Username/Email' className='loginform_input' onChange={(event)=>{
