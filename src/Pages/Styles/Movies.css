@@ -1,0 +1,9 @@
+.movie_parent{
+    width: 90%;
+    margin: 20px auto 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-content: center;
+    /* border: 2px solid red; */
+    gap: 20px;
+}

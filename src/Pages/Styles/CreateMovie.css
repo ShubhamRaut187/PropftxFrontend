@@ -1,0 +1,134 @@
+.createmovieform_main{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+}
+.createmoviemsg_div{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('https://wallpapers.com/images/hd/treadmill-gym-loft-ko40byqogljiyz5i.jpg');
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.createmoviemsg_div>h3{
+    margin-bottom: 0px;
+    color: white;
+}
+.createmoviemsg_div>h1{
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+}
+.createmoviemsg_div>p{
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    margin-top: 0px;
+}
+.createmovieform_div{
+    width: 40%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.createmovieform_div>h2{
+    margin-bottom: 0px;
+    color: #ffbd39;
+    text-align: center;
+    text-decoration: overline;
+}
+.createmovieform_div>p{
+    margin: 5px 10px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+.createmovieform_div>form{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.createmovieform_input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 30px;
+    border: none;
+    background-color: #1a1a1a;
+    border-left: 5px solid #ffbd39;
+    font-weight: 700;
+}
+.createmovieform_input:focus{
+    border: 2px solid #181f2a;
+    border-left: 5px solid #181f2a;
+}
+.createmovieform_input_address{
+    width: 50%;
+    height: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: #1a1a1a;
+    border-left: 5px solid #ffbd39;
+    font-weight: 700;
+}
+.createmovieform_signup_btn{
+    width: 30%;
+    height: 30px;
+    border: none;
+    background-color: #ffbd39;
+    color: black;
+    font-weight: 800;
+    border-radius: 4px;
+
+}
+.createmovieform_signup_btn:hover{
+    background-color: white;
+    color: black;
+}
+/* Media */
+/* Small Screens */
+@media screen and (min-width:320px) and (max-width:767px){
+    .createmovieform_main{
+        width: 100%;
+        flex-direction: column;
+    }
+    .createmoviemsg_div{
+        width: 100%;
+        background-size: 200%;
+        /* border: 2px solid black; */
+    }
+    .createmovieform_div{
+        width: 100%;
+    }
+}
+
+/* Medium Screens */
+@media screen and (min-width:768px) and (max-width:1024px){
+    .createmovieform_main{
+        width: 100%;
+        
+    }
+    .createmoviemsg_div{
+        width: 50%;
+        background-size: 250%;
+        /* border: 2px solid black; */
+    }
+    .createmovieform_div{
+        width: 50%;
+    }
+}
