@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import LoadingComp from '../Components/LoadingComp';
 
 function Movies(props) {
+    let [Search,SetSearch] = useState('');
     let Token = useSelector((store)=>{
         return store.user.Token;
     })
@@ -44,10 +45,17 @@ function Movies(props) {
             {
                 Role === 'Admin'? <CreateMovieButton/>:<></>
             }
+            <div className='movie_search'>
+                <input type="text" placeholder='Enter Movie Name' onChange={(e)=>{
+                        SetSearch(e.target.value);
+                }}/>
+            </div>
             {
                 Loading ? <LoadingComp Text={'Getting Movies'}/> : <div className='movie_parent'>
                 {
-                 Movies?Movies.map((elem)=>{
+                 Movies?Movies.filter((item)=>{
+                    return Search.toLowerCase() === '' ? item : item.Name.toLowerCase().includes(Search.toLowerCase());
+                 }).map((elem)=>{
                      return <MovieCard key={elem._id} elem={elem} Token={Token} Role={Role} getData={getData}/>
                  }) : <></>
                 }

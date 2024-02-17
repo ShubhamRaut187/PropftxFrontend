@@ -14,6 +14,7 @@ function LoginForm({Setpgname}) {
 
     let verify = async(e) => {
         e.preventDefault();
+        SetLoading(true);
         if(!Email || !Password){
             SetLoading(false);
             alert('All fields are mandatory');

@@ -7,6 +7,23 @@
     /* border: 2px solid red; */
     gap: 20px;
 }
+.movie_search{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 20px; */
+}
+.movie_search>input{
+    margin-left: 20px;
+    height: 30px;
+    width: 30%;
+    background-color: #1a1a1a;
+    font-weight: 900;
+    color: #ffbd39;
+    border: none;
+}
 
 /* Media */
 /* Small Screens */
@@ -14,7 +31,9 @@
    .movie_parent{
     grid-template-columns: repeat(1,1fr);
    }
-
+   .movie_search>input{
+    width: 80%;
+   }
  }
  
  /* Medium Screens */
