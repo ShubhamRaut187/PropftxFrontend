@@ -30,3 +30,6 @@ Upon successful login, the Redux store reflects the user's authenticated state, 
 # Backend Repository
 https://github.com/ShubhamRaut187/PropftxBackend
 
+# Home Page
+![Home](https://github.com/ShubhamRaut187/PropftxFrontend/blob/main/src/Images/Home.png?raw=true)
+
