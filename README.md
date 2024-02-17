@@ -33,3 +33,17 @@ https://github.com/ShubhamRaut187/PropftxBackend
 # Home Page
 ![Home](https://github.com/ShubhamRaut187/PropftxFrontend/blob/main/src/Images/Home.png?raw=true)
 
+# Login Page
+![Login](https://github.com/ShubhamRaut187/PropftxFrontend/blob/main/src/Images/Login.png?raw=true)
+
+# Signup Page
+![Signup](https://github.com/ShubhamRaut187/PropftxFrontend/blob/main/src/Images/Signup.png?raw=true)
+
+# Movies (Admin)
+![Movies](https://github.com/ShubhamRaut187/PropftxFrontend/blob/main/src/Images/Movies.png?raw=true)
+
+# Create Movie(Admin)
+![CreateMovie](https://github.com/ShubhamRaut187/PropftxFrontend/blob/main/src/Images/create.png?raw=true)
+
+# Update Movie(Admin)
+![UpdateMovie](https://github.com/ShubhamRaut187/PropftxFrontend/blob/main/src/Images/Update%20Movie.png?raw=true)
